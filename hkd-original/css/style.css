@@ -1,0 +1,464 @@
+@charset "utf-8";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.7;
+    font-family: 'Yuji Syuku', serif;
+    color: #330;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+img {
+    height: auto;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+/* header */
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+@media (max-width:768px) {
+    .head {
+        flex-direction: column;
+    }
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+    /* opacity: 1; */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item+.nav-item {
+    margin-left: 30px;
+}
+
+.nav-item a:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+/* top-img */
+.bg-img {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bg-img img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+#kenkouhou {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    color: #fff;
+    font-family: 'Yuji Mai', serif;
+    font-size: calc(36/16*1rem);
+    white-space: nowrap;
+    overflow: hidden;
+    animation-name: kenkou;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    text-shadow: 2px 2px 2px #666666;
+    animation-fill-mode: backwards;
+}
+
+#kenkouhou2 {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    color: #fff;
+    font-family: 'Yuji Mai', serif;
+    font-size: calc(36/16*1rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: 3rem;
+    animation-name: kenkou;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    text-shadow: 2px 2px 2px #666666;
+    animation-fill-mode: backwards;
+}
+
+@keyframes kenkou {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+
+    #kenkouhou,
+    #kenkouhou2 {
+        /* font-size: calc(22/16*1rem); */
+        font-size: 100%;
+    }
+}
+
+/*  section共通*/
+section {
+    margin: 150px 0 0;
+}
+
+.sec-title {
+    font-size: calc(26/16*1rem);
+    text-align: center;
+    line-height: 1;
+    padding: 30px 0;
+}
+
+.sub-name {
+    font-size: 14px;
+}
+
+/* news */
+#news {
+    background-image: url(../img/lotus-blossom-g26312a642_640.png);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.p-box {
+    text-align: center;
+    font-size: calc(21/16*1rem);
+}
+
+.p-box p {
+    padding-bottom: 15px;
+}
+
+/* meditation */
+.img-container {
+    display: flex;
+    gap: 10px;
+}
+
+.img2 {
+    position: relative;
+
+}
+
+.img2 img {
+    position: absolute;
+    top: -130px;
+}
+
+.img3 {
+    position: relative;
+}
+
+.img3 img {
+    position: absolute;
+    left: 200px;
+    top: 185px;
+}
+
+.medi {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 200px;
+}
+
+@media (max-width:768px) {
+    .medi {
+        flex-direction: column;
+    }
+}
+
+.img1 img,
+.img2 img,
+.img3 img {
+    box-shadow: 10px 10px 15px -10px;
+}
+
+.text-medi dt {
+    font-size: calc(24/16*1rem);
+    font-weight: bold;
+}
+
+/* workshop */
+.dl-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+
+.workshop-container {
+    background-image: url(../img/omamori.jpg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: right center;
+}
+
+
+.workshop-info {
+    /* background-image: url(../img/omamori.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom; */
+    /* display: flex; */
+    /* flex-direction: column;
+    align-items: center; */
+    width: 45%;
+    margin: 0 auto;
+}
+
+
+
+/* お申込みボタン */
+.application {
+    text-align: center;
+}
+
+.application a {
+    padding: 20px;
+    border: 1px solid rgb(199, 204, 202);
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.application a:after {
+    content: ">>";
+    font-size: 10px;
+    vertical-align: middle;
+    padding: 20px;
+}
+
+.application a:hover {
+    background-color: #6c9;
+    color: #fff;
+    transition: 0.5s;
+    border: 1px solid #fff;
+}
+
+/* schedule */
+.day1,
+.day2 {
+    display: flex;
+    justify-content: center;
+    font-size: calc(14/16*1rem);
+}
+
+@media (max-width:768px) {
+
+    .day1,
+    .day2 {
+        flex-direction: column;
+        font-size: calc(14/16*1rem);
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.time-schedule {
+    width: 300px;
+    height: 300px;
+    padding: 100px 50px;
+    border: 1px solid rgb(199, 204, 202);
+}
+
+.day1-item dt,
+.day2-list dt {
+    padding-right: 20px;
+}
+
+.schedule {
+    padding-top: 100px;
+}
+
+.day1-item,
+.day2-item {
+    display: flex;
+}
+
+.day1-item:first-child,
+.day2-item:first-child {
+    margin-bottom: 10px;
+}
+
+.schedule h3 {
+    margin-bottom: 5px;
+    /* margin-left: 100px; */
+    display: inline-block;
+    /* background: linear-gradient(transparent 60%, #6c9 60%); */
+}
+
+.schedule h3 span {
+    font-size: calc(12/16*1rem);
+}
+
+.day1 {
+    padding-bottom: 50px;
+}
+
+#pdf {
+    margin-top: 10px;
+    font-weight: bold;
+    /* display: inline-block; */
+    background: linear-gradient(transparent 60%, #6c9 60%);
+}
+
+.pdf {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pdf img {
+    display: inline;
+}
+
+/* access */
+iframe {
+    width: 100%;
+}
+
+.access-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.access-info {
+    width: 22%;
+}
+
+.access-map {
+    width: 74%;
+}
+
+@media (max-width:768px) {
+    .access-container {
+        flex-direction: column;
+    }
+    .access-info {
+        width: 45%;
+        margin: 0 auto;
+        margin-bottom: 10px;    
+    }
+}
+
+
+/* js　ふわっと設定 */
+.on {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 5s, transform 2s;
+}
+
+.on.is-active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* contact */
+#contact {
+    background-image: url(../img/contact.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: top right;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(255, 255, 255, .5);
+    border: 1px solid rgb(199, 204, 202);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+textarea {
+    width: 30rem;
+    height: 10rem;
+}
+
+input[type="submit"] {
+    background: rgba(255, 255, 255, .5);
+    border: 1px solid rgb(199, 204, 202);
+    border-radius: 5px;
+    padding: 5px 10px;
+
+}
+
+/* footer */
+footer {
+    background-color: #330;
+    text-align: center;
+    color: #fff;
+    padding: 30px 0 10px;
+}
+
+.ft-logo {
+    width: 150px;
+    opacity: 1;
+}
+
+footer p small {
+    font-size: calc(10/16*1rem);
+}
+
+/*toppage*/
+.top__link.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    /* background: rgba(102,204,153,0.5);  */
+    border: 1px solid #6c9;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.3;
+    position: fixed;
+    right: 100px;
+    bottom: 10px;
+    z-index: 500;
+    text-shadow: #fff 1px 0 1px;
+}
