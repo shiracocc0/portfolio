@@ -270,8 +270,8 @@ h1 a {
   /* text-align: center; */
   max-width: 600px;
   margin: 0 auto;
-  padding-left:-1em;
-	text-indent:1em;
+  padding-left: -1em;
+  text-indent: 1em;
 }
 
 /* ---------セクションタイトルと太陽の設定---------------- */
@@ -350,6 +350,17 @@ dl {
 
 .favorite-container {
   margin-top: 50px;
+  max-width: 100%;
+  /* 親要素の幅に合わせる */
+  overflow: hidden;
+  /* 親要素を超えたコンテンツを非表示にする */
+}
+
+@media (max-width:767px) {
+  .favorite {
+    height: auto;
+    max-width: 200px;
+  }
 }
 
 .favorite-container h3 {
@@ -398,7 +409,9 @@ dl {
 
 .swiper .swiper-wrapper {
   transition-timing-function: linear;
-}/* スライドをスムーズにする */
+}
+
+/* スライドをスムーズにする */
 
 
 
@@ -439,6 +452,7 @@ dl {
   border-right: 1px solid #444;
   padding-bottom: 20px;
 }
+
 /* .works-box img {
   background-color: #fca476;
 } */
@@ -448,9 +462,9 @@ dl {
   margin-bottom: 40px;
 }
 
-.works-box p {
+/* .works-box p {
   margin-top: 10px;
-}
+} */
 
 .works-banner {
   display: flex;
@@ -460,12 +474,6 @@ dl {
 }
 
 .works-others {
-  /* display: flex;
-  justify-content: space-around;
-  gap: 20px; */
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
-  gap: 20px; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, auto));
   gap: 20px;
@@ -475,12 +483,15 @@ dl {
 .others-box video {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .others-box {
   text-decoration: none;
   color: #444;
-  width: 400px;
+  /* width: 400px; */
   border-bottom: 1px solid #444;
   border-right: 1px solid #444;
   padding-bottom: 20px;
@@ -570,6 +581,7 @@ dl {
   /* font-size: 18px; */
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
   transition: 0.7s;
+  margin-top: 20px;
 }
 
 .btn-square-emboss:active {
@@ -605,6 +617,7 @@ footer {
   padding: 0 0 0 35px;
   border-top: solid 1px;
 }
+
 #page-top::before {
   content: "";
   display: block;
